@@ -8,6 +8,7 @@ let orm = {
     selectAll: function(theTable, cb) {
         let queryString = "SELECT * FROM " + theTable + ";";
         connection.query(queryString, function(err, result) {
+            console.log(result[0].burger_name);
             if(err) {
                 throw err;
             } else {

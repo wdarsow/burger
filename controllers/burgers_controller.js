@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
             burgers: data
         };
         console.log(handlebarsObject);
-        res.render("index", handlebarsObject);
+        res.render("index", {burgersforloop: data});
         //console.log("processing response.render in the router.get")
         //res.render("index", handlebarsObject);
     })

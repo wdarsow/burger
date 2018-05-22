@@ -7,9 +7,20 @@
 
 Available Burgers
 
-  {{burgers}}
+  {{#each burgersforloop}}
+    <p>Burger Name: {{burger_name}}</p>
+    <p>Id Number: {{id}}</p>
+    <p>Devoured: {{devoured}}</p>
+  {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
 
-    {{hbsObject}}
+<!-- {{#each burgersforloop}}
+   
+  {{/each}} --> 
+
+
 </ul>
 
 <h2>Burgers you've eaten!</h2>
