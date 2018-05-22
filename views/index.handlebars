@@ -1,0 +1,39 @@
+<h1>Burger Application</h1>
+
+<h2>Burgers for you to eat!</h2>
+
+<ul id="availBurger">
+<!--display each of the burgers where devoured = false here -->
+
+Available Burgers
+
+  {{burgers}}
+
+    {{hbsObject}}
+</ul>
+
+<h2>Burgers you've eaten!</h2>
+
+<ul id="burgerEaten">
+<!--display each of the burgers where devoured = true here -->    
+  {{burgers}}
+</ul>
+
+<h2>Add a burger that you'd like to eat!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burgerName">Name of Burger</label>
+    <input type="text" id="burgerName" name="name">
+  </div>
+<!--
+  when a new burger name is entered in the text box and the Add new burger button is pressed,
+  the burger name is written to the sql database and a new devour it button is displayed on the webpage.
+-->
+  <button type="submit">Add new burger</button>
+
+<!-- when the devour it button is pressed the corresponding burger is moved from available
+to the eaten section. The SQL database devour flag for the burger is changed to true.-->
+
+</form>
+
